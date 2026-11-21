@@ -1,0 +1,23 @@
+# runtime output
+logs/
+outputs/
+__pycache__/
+*.pyc
+nav/scene.json
+nav/maps/*.pgm
+nav/maps/*.yaml
+.configured
+# intermediate build files (build_demo.sh regenerates them; full_demo_main.py is shipped)
+full_demo_perc_nav.py
+full_demo_perc_nav_scan.py
+full_demo_perc_nav_amcl.py
+full_demo_goto.py
+full_demo_mover.py
+full_demo_panel.py
+full_demo_multi.py
+full_demo_flow.py
+# media / checkpoints
+*.mp4
+*.webm
+model_*.pt
+assets/*.usd
