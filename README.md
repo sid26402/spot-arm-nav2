@@ -1,5 +1,7 @@
 # Spot with arm: Nav2 + body/wrist-camera pick-and-place (Isaac Sim 6.0 / Isaac Lab 3.0)
 
+![Spot with arm demo](docs/demo.gif)
+
 Boston Dynamics Spot with arm, fully simulated in Isaac Lab 3.0 / Isaac Sim 6.0. Spot navigates a maze with ROS 2 Humble Nav2 (AMCL localisation on a simulated lidar, a moving obstacle that is not in the map). It identifies coloured cubes on a table with its front body camera, asks which cube to pick and which bin to put it in, localises the chosen cube with the wrist camera, picks it with a reinforcement-learning arm policy, carries it through the maze and places it in the bin.
 
 Demo video: (link coming)
@@ -107,3 +109,13 @@ Twelve picks is a small sample: the real success rate is high, but not guarantee
 | `policies/` | Trained policies: walking `spot_arm_flat_v2`, arm `spot_arm_topdown_v9g` |
 | `assets/` | Scripts that recreate the modified NVIDIA robot and bin USDs (the USDs themselves can't be redistributed) |
 | `install.sh`, `run_demo.sh` | Set up paths on your machine; start the demo |
+
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Start: Nav2 + AMCL ready](docs/1_overview.png)<br>Start: Nav2 + AMCL ready | ![Body camera finds the cubes](docs/2_bodylook.png)<br>Body camera finds the cubes |
+| ![RL arm policy picks the cube](docs/3_pick.png)<br>RL arm policy picks the cube | ![Nav2 replans around the moving box](docs/4_detour.png)<br>Nav2 replans around the moving box |
+| ![Cube placed in the bin](docs/5_release.png)<br>Cube placed in the bin | ![All cubes placed](docs/6_done.png)<br>All cubes placed |
+| ![Second bin](docs/7_bin2.png)<br>Second bin |  |
